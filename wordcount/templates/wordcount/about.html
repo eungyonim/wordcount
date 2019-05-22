@@ -1,0 +1,35 @@
+<head>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+    body {
+        font-family: 'Noto Sans KR', sans-serif;
+        background-color: black;
+        text-align: center;
+    }
+    
+    #title {
+        color:whitesmoke;
+        margin-top: 100px;
+    }
+
+    #sub {
+        color: orange;
+    }
+
+    #ex {
+        color: aliceblue;
+        margin: 30px 30px;
+    }
+
+    #gohome:hover {
+        color: orange;
+    }
+</style>
+</head>
+
+<body>
+<h1 id="title"> 단어를 입력하세요! </h1>
+<h2 id="sub"> 글자 수를 세워 줍니다.</h2>
+<p id="ex">삼육대학교 김은교가 열심히 따라서 만들었습니다.</p>
+<a href="{% url 'index' %}" id="gohome">home으로 가기</a>
+</body>

@@ -1,0 +1,40 @@
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+    body {
+        font-family: 'Noto Sans KR', sans-serif;
+        background-color: black;
+        text-align: center;
+    }
+    #title {
+        color:whitesmoke;
+    }
+    
+    #about {
+        color: blueviolet;
+            }
+    #about:hover {
+        color: orange;
+    }
+
+
+    </style>
+</head>
+
+<body>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAqFBMVEUAAAD/nhv/////pRz/oxz/px2CVQ8gICBrSAzvmBr/ohz/oBv29vbx8fEvLy/slxqdZhE0IwVKSkq0dRS8vLw/KgeqqqpSNglPT09cXFywsLCtcROobBJOMwncjRj5oBxxTQ2DVQ/i4uIkGQSbm5uRXhA/Pz/e3t6CgoJ4Tw3QhhcTDgMpKSkdFQOPj48LBgH/rx3CfBVoaGhePgtycnLJyckWFhbLgxbpJLkQAAACCUlEQVR4nO3ciU7CQBRGYZQCtSwW9x0VFcEF3N//zUSHhCgUOu29dCac7wHknvyxGDSWSgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOtq+FT0BXPUPiW/WjyqWBoNbV/jcdPOgWRgqdS9KG9YKVu/RM2qr9eSDRy7CuoOFT6L9409DWxmVC3sPSr0/agGkROF9wptEw+DSvGFvZpC2VQ/SjmjWqHigBNf6WZUKvwQfRNM0I/SPFR1CvUHNNLMqFG4kgGNsLN0RoXCd4WSZC/LZhQv/FCoWCjsLH6oSheudkBj8YyyhSsf0HhbNKNo4avC9ensJs8oWLincHlqb1tJM4oVNoob0EiaUaqw0AGNw/kzyhQ2jhUutnc6b0aRwhOFazM53w40CptuDGiczcyYv9CZAY39/zPmLWweKVyZT1yWLBT+qFDG3xlzFTZ3FO6TEFfqIoVODmi0pzNmL7y+U7hMTlyu5yy8UbhKVHvy8X/GQscHNG5/vxuzFTo/oNG9CLIVXsv/tkVLHGUobDn8CJ0RBhkKvUKh/yj0H4X+o9B/FPqPQv9R6D8K/Ueh/yj0H4X+o9B/FPpvLQqjqqWrftFX2xgXbgS2OkVfbSOc/Rup5baKvtoGhRS6j0IK3Uchhe6j0P/CS+t/wTDm1U/eAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0PUNcnsg5Rf2SKEAAAAASUVORK5CYII=" alt="likelion"
+            height="180px">
+<h1 id="title">WORDCOUNT</h1>
+
+{% comment %} 페이지 설명(about링크)
+글씨를 받을 수 있는 form태그
+숫자를 세주는 count로 갈 수 있는 링크 {% endcomment %}
+
+<a href="{% url 'about' %}" id="about">about</a><br><Br>
+<form action="{% url 'count' %}">
+    <textarea cols="80" rows="10" name="fulltext"></textarea>
+    <br><br>
+    <input type="submit" value="COUNT!" class="btn btn-outline-warning" >
+</form>
+</body>

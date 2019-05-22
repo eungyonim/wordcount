@@ -1,0 +1,49 @@
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+    body {
+        font-family: 'Noto Sans KR', sans-serif;
+        background-color: black;
+        text-align: center;
+    }
+
+    #ex1 {
+        color: aliceblue;
+        font-size: 30px;
+        margin: 50px 40px;
+    }
+
+    .ex2 {
+        color: aliceblue;
+        font-size: 30px;
+    }
+    
+    .full {
+        color: aliceblue;
+        margin-bottom: 40px;
+    }
+
+    .em {
+        color: orange;
+    }
+
+    </style>
+</head>
+
+<body>
+<br><Br><Br><br><br>
+    <a href="{% url 'index' %}" id="retry"><button class="btn btn-outline-warning" > 다시 하기 </button> </a>
+    <p id="ex1"> 당신이 입력한 텍스트는 <span class="em"> 총 {{total}}개 </span>의 단어로 구성되어 있습니다. </p>
+    <p class="ex2">입력한 <span class="em">전체 텍스트</span>는 다음과 같습니다.</p>
+    <p class="full"> : {{ fulltext }} </p>
+
+    <p class="ex2"> <span class="em">각 단어가 나온 횟수</span>입니다.</p>
+    <p class="full">{% for word, countTotal in dictionary %}
+    {{ word }}-{{ countTotal }}
+    <br>
+    {% endfor %} </p>
+
+
+
+</body>
