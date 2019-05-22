@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 
 def home(request):
-    return render (request, 'wordcount/index.html')
+    return render (request, 'wordcount/home.html')
 
 def about(request):
     return render (request, 'wordcount/about.html')
